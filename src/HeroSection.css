@@ -1,0 +1,130 @@
+/* ==============================
+   Hero Section Base
+   ============================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5%; /* reduce left padding for balance */
+  background: linear-gradient(135deg, #e0f7f1 0%, #ffffff 100%);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero image */
+.hero-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%; /* adjust width to cover space next to text */
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 0; /* remove left rounded corner */
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 50%; /* content width */
+  /* display: flex; */
+  flex-direction: column;
+  gap: 1.1rem;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 820;
+  line-height: 1.2;
+  color: #fbfdff;
+
+  text-align: left;
+}
+
+/* Hero Text */
+.hero-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  font-weight: bolder;
+}
+
+/* Upload Button */
+.photo-upload .upload-label {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #38a169;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+}
+
+.photo-upload .upload-label:hover {
+  background-color: #2f855a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(56, 161, 105, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .photo-upload .upload-label {
+    font-size: 0.95rem;
+  }
+}

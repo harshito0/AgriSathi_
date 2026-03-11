@@ -1,0 +1,175 @@
+/* ------------------------------------------------------------------- */
+/* 1. Header Base (Transparent with Gradient Overlay) */
+/* ------------------------------------------------------------------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  ); /* subtle overlay */
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. Scrolled State (Solid Background) */
+/* ------------------------------------------------------------------- */
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. Logo Styling */
+/* ------------------------------------------------------------------- */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff; /* white on transparent */
+  cursor: pointer;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header.scrolled .logo {
+  color: #2a7a2a; /* dark green on scroll */
+}
+
+/* ------------------------------------------------------------------- */
+/* 4. Desktop Navigation Links */
+/* ------------------------------------------------------------------- */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* white over transparent bg */
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.header.scrolled .nav-links a {
+  color: #333; /* dark text on white bg */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #2a7a2a;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. Right Section (Language & Menu) */
+/* ------------------------------------------------------------------- */
+/* Swap the order: Hamburger left, language selector right */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-select {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  appearance: none;
+  text-align: center;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: #2a7a2a;
+  box-shadow: 0 0 0 3px rgba(42, 122, 42, 0.3);
+}
+
+.language-select:hover {
+  transform: translateY(-1px);
+  border-color: #2a7a2a;
+}
+
+/* Menu Toggle Button - visible always */
+.menu-toggle-button {
+  display: flex;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.header.scrolled .menu-toggle-button {
+  color: #333;
+}
+
+/* ------------------------------------------------------------------- */
+/* 6. Media Queries (Mobile View) */
+/* ------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header-right {
+    gap: 0.2rem;
+  }
+
+  .mobile-menu {
+    top: 100%;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .mobile-menu a {
+    color: #2a7a2a;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .mobile-menu a:hover {
+    color: #1e4d1e;
+  }
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Main Container */
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .notifications-container {
+    flex-direction: row;
+  }
+}
+
+/* Left Column */
+.left-column {
+  flex: 1;
+  background-color: #f9f7f0;
+  padding: 1.5rem 2.5rem;
+  border-right: 2px solid #e0dbcf;
+}
+
+.header {
+  display: flex;
+
+  /* align-items: center; */
+  margin-bottom: 1.5rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6d6345;
+  border-bottom: 2px solid #6d6345;
+  padding-bottom: 0.5rem;
+}
+
+.see-more-button {
+  color: #6d6345;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.see-more-button:hover {
+  text-decoration: underline;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #efeae3;
+  color: #6d6345;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-card:hover {
+  background-color: #e0dbcf;
+}
+
+.news-card-selected {
+  background-color: #6d6345;
+  color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-summary {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.news-icon {
+  color: #a79f89;
+  margin-left: 0.5rem;
+}
+
+/* Right Column */
+.right-column {
+  flex: 1;
+  background-color: #f5f2ec;
+  padding: 1.5rem 2.5rem;
+}
+
+.news-details-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #786d58;
+  color: white;
+}
+
+.news-details-content {
+  padding: 1.5rem;
+}
+
+.news-details-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.news-details-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.download-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.loading-message,
+.no-notifications-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #6d6345;
+  margin-top: 2rem;
+}
+/* Notifications.css */
+
+/* General layout */
+.notifications-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Column */
+.left-column {
+  flex: 1;
+  max-width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.see-more-button {
+  padding: 6px 12px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-card {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f5f7fa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.news-card:hover,
+.news-card-selected {
+  background-color: #dff0d8;
+}
+
+.news-summary {
+  font-size: 0.95rem;
+}
+
+.news-icon {
+  margin-left: 5px;
+}
+
+/* Right Column */
+.right-column {
+  flex: 2;
+  position: relative;
+}
+
+.news-details-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.news-details-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.news-details-item {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.download-link {
+  color: #2196f3;
+  cursor: pointer;
+}
+
+/* Chatbot section */
+.chatbot-section {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ask-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.ask-button:hover {
+  background-color: #fb8c00;
+}
+
+/* Chatbot response bubble */
+.chatbot-response {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-top: 10px;
+  max-width: 80%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 0.95rem;
+}
+
+/* Loading indicator in chatbot */
+.chatbot-response p {
+  margin: 0;
+}
+
+/* Fade in animation for chatbot bubble */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Language selector */
+.language-selector {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.language-selector select {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  size: 30px;
+}
+/* Floating Chatbot */
+.floating-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 9999;
+}
+
+.chatbot-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chatbot-body {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.chatbot-response {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  max-width: 90%;
+  align-self: flex-start;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.chatbot-input-section {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-send {
+  padding: 6px 12px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.chatbot-send:hover {
+  background-color: #fb8c00;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== General ===== */
+.notifications-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* ===== Left Column ===== */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.see-more-button {
+  padding: 6px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-card {
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  border: 1px solid #ddd;
+}
+
+.news-card:hover {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.news-card-selected {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+}
+
+.news-summary {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.news-icon {
+  margin-left: 5px;
+}
+
+/* ===== Right Column ===== */
+.right-column {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-details-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.news-details-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.news-details-item {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.download-link {
+  color: #4caf50;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loading-message {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* ===== Language Selector ===== */
+.language-selector {
+  margin-bottom: 15px;
+}
+
+.language-selector select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* ===== Chatbot ===== */
+.chatbot-container {
+  margin-top: 15px;
+}
+
+.chatbot-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fefefe;
+  padding: 10px;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chatbot-response {
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  background: #e0f2f1;
+  border-radius: 6px;
+  max-width: 80%;
+}
+
+.chatbot-input-section {
+  display: flex;
+  gap: 5px;
+}
+
+.chatbot-input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-send {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbot-send:hover {
+  background-color: #43a047;
+}
+
+/* ===== Back Button ===== */
+.notifications-container button {
+  cursor: pointer;
+}
+/* ===== Container ===== */
+.notifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ===== Left Column (News List) ===== */
+.left-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.see-more-button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.news-card:hover {
+  border: 1px solid #4caf50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-card-selected {
+  border: 2px solid #4caf50;
+}
+
+.news-summary {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.news-icon {
+  margin-left: 5px;
+}
+
+/* ===== Right Column ===== */
+.right-column {
+  flex: 2;
+  min-width: 300px;
+}
+
+.top-right-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.back-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.language-selector select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ===== News Details Card ===== */
+.news-details-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.news-details-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.news-details-item {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.download-link {
+  color: #2196f3;
+  cursor: pointer;
+}
+
+/* ===== Speaker Button ===== */
+.speaker-button {
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.speaker-button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Chatbot ===== */
+.chatbot-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+}
+
+.chatbot-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fefefe;
+  padding: 10px;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chatbot-response {
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  background: #e0f7fa;
+}
+
+.chatbot-input-section {
+  display: flex;
+  gap: 5px;
+}
+
+.chatbot-input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-send {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .notifications-container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    max-width: 100%;
+  }
+  .top-right-controls {
+    justify-content: space-between;
+  }
+}
+/* ===== Chatbot Messages ===== */
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chatbot-response {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* AI Messages */
+.chatbot-response.ai {
+  background: #e0f7fa;
+  align-self: flex-start;
+}
+
+/* User Messages */
+.chatbot-response.user {
+  background: #c8e6c9;
+  align-self: flex-end;
+}
+
+/* Speaker icon for AI messages */
+.speaker-icon {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2196f3;
+}
+.speaker-icon:hover {
+  opacity: 0.8;
+}

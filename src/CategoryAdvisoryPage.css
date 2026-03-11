@@ -1,0 +1,313 @@
+/* ===== General Page ===== */
+.category-page {
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+/* ===== Language Selector ===== */
+.language-selector-corner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.language-selector-corner select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== Page Title ===== */
+.category-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== Crop Grid ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* ===== Crop Card ===== */
+.category-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 250px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.category-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.category-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===== Compare Button ===== */
+.category-card {
+  position: relative; /* Make child absolute positioning relative to this card */
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compare-btn {
+  position: absolute; /* position top-right */
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  z-index: 10; /* ensure it stays above other elements */
+}
+
+.compare-btn.selected {
+  background: #2e7d32; /* darker green when selected */
+}
+
+.compare-btn.selected {
+  background: #388e3c;
+}
+
+/* ===== Badges ===== */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9800;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.badge-season {
+  background: #2196f3;
+  bottom: 10px;
+  left: 10px;
+  top: auto;
+}
+
+.badge-price {
+  background: #4caf50;
+  bottom: 10px;
+  right: 10px;
+  top: auto;
+}
+
+/* ===== Comparison Panel ===== */
+.comparison-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 95%;
+  margin: 0 auto 30px auto;
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-comparison {
+  border: none;
+  background: #f44336;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.comparison-table th {
+  background: #f0f0f0;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 15px;
+}
+
+.modal-icon {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.modal-text p {
+  text-align: left;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Modal Close Button */
+.modal-close-btn {
+  margin-top: 15px;
+  padding: 6px 12px;
+  border: none;
+  background: #f44336;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Chatbot Widget ===== */
+.chatbot-widget-global {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.chatbot-messages {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chatbot-response {
+  padding: 6px 12px;
+  border-radius: 12px;
+  margin: 4px 0;
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chatbot-response.user {
+  background: #c8e6c9;
+  align-self: flex-end;
+}
+
+.chatbot-response.bot {
+  background: #e3f2fd;
+  align-self: flex-start;
+}
+
+/* Chat Input Section */
+.chatbot-section {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.chatbot-section input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-section button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mic-btn {
+  background: #2196f3;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .modal-content {
+    padding: 15px;
+  }
+}

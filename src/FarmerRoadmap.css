@@ -1,0 +1,361 @@
+.farmer-roadmap-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #cbd5e1;
+}
+
+.roadmap-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #16a34a;
+}
+
+.goal-input-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.goal-input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.generate-btn {
+  padding: 0.75rem 1.5rem;
+  background: #16a34a;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.generate-btn:hover {
+  background: #15803d;
+}
+
+.listen-all-btn {
+  padding: 0.75rem 1.5rem;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.listen-all-btn:hover {
+  background: #1d4ed8;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 4px solid #34d399; /* Green timeline line */
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-step-green .timeline-dot {
+  background: #34d399;
+}
+.timeline-step-yellow .timeline-dot {
+  background: #facc15;
+}
+.timeline-step-orange .timeline-dot {
+  background: #f97316;
+}
+.timeline-step-blue .timeline-dot {
+  background: #3b82f6;
+}
+.timeline-step-green-dark .timeline-dot {
+  background: #15803d;
+}
+.timeline-step-red .timeline-dot {
+  background: #ef4444;
+}
+.timeline-step-purple .timeline-dot {
+  background: #8b5cf6;
+}
+.timeline-step-teal .timeline-dot {
+  background: #14b8a6;
+}
+.timeline-step-lime .timeline-dot {
+  background: #84cc16;
+}
+.timeline-step-gray .timeline-dot {
+  background: #6b7280;
+}
+.timeline-step-indigo .timeline-dot {
+  background: #6366f1;
+}
+.timeline-step-pink .timeline-dot {
+  background: #ec4899;
+}
+
+.timeline-card {
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.timeline-card p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #10b981;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.timeline-card button:hover {
+  background: #059669;
+}
+
+.timeline-arrow {
+  position: absolute;
+  left: -1rem;
+  top: 3.5rem;
+  width: 1rem;
+  height: 2rem;
+  border-left: 4px solid #34d399;
+  border-bottom: 4px solid #34d399;
+  transform: rotate(-45deg);
+}
+.farmer-roadmap-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.back-btn {
+  background: #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.roadmap-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.goal-input-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.goal-input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.generate-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+.timeline-container {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #28a745;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.timeline-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  flex: 1;
+}
+
+.timeline-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.complete-btn {
+  background: #ffc107;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.timeline-arrow {
+  width: 2px;
+  height: 2rem;
+  background: #28a745;
+  position: absolute;
+  left: 1rem;
+  top: 2.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.progress-bar {
+  height: 1rem;
+  background: #28a745;
+  border-radius: 1rem;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  font-weight: bold;
+}
+
+.ai-chatbot {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.chat-toggle-btn {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.chat-window {
+  width: 300px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+.chat-msg.user {
+  text-align: right;
+  margin-bottom: 0.3rem;
+}
+
+.chat-msg.ai {
+  text-align: left;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.chat-input-container {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-container input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+}
+
+.chat-input-container button {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 0 1rem;
+}
+
+.feedback-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}

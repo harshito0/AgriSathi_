@@ -1,0 +1,197 @@
+/* AgriLocker.css */
+
+/* GENERAL PAGE */
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f0fdf4; /* light green */
+}
+
+/* PAGE CONTAINER */
+.agri-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* BACK BUTTON */
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* HEADER */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* CATEGORY TABS */
+.categories-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.category-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #22c55e;
+  background-color: white;
+  color: #16a34a;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.category-btn:hover {
+  background-color: #bbf7d0;
+  transform: scale(1.05);
+}
+.category-btn.bg-green-500 {
+  background-color: #22c55e !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+  transform: scale(1.1);
+}
+
+/* UPLOAD SECTION */
+.agri-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px dashed #22c55e;
+  border-radius: 0.75rem;
+  background-color: #ecfdf5;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+}
+.agri-upload.drag-over {
+  background-color: #bbf7d0;
+  border-color: #16a34a;
+  transform: scale(1.02);
+}
+.agri-upload input[type="file"] {
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.agri-upload select {
+  border-radius: 0.5rem;
+}
+
+/* FILE CARDS */
+.file-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.file-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* FILE ICONS */
+.file-card span {
+  font-size: 1.5rem;
+}
+
+/* FILE ACTION BUTTONS */
+.action-btn {
+  transition: all 0.2s ease;
+}
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+/* FILE GRID */
+.grid-md-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+/* PREVIEW MODAL */
+.preview-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-modal .bg-white {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.preview-modal img,
+.preview-modal iframe {
+  max-width: 100%;
+  max-height: 60vh;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* MODAL BUTTONS */
+.preview-modal button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 500;
+}
+.preview-modal button:hover {
+  background-color: #22c55e;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* AI TIP BOX */
+.ai-placeholder {
+  max-width: 600px;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #bbf7d0;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.ai-placeholder:hover {
+  background-color: #22c55e;
+  color: white;
+  transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid-md-2 {
+    grid-template-columns: 1fr;
+  }
+  .agri-upload {
+    width: 90%;
+  }
+}

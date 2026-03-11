@@ -1,0 +1,547 @@
+/* ==================== Global Styles ==================== */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
+  color: #111827;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ==================== Buttons ==================== */
+.btn-primary {
+  background-color: #16a34a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 4px;
+  transition: 0.2s;
+}
+.btn-primary:hover {
+  background-color: #15803d;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 4px;
+  transition: 0.2s;
+}
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* ==================== OTP Card ==================== */
+.otp-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.otp-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.otp-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.otp-step input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.otp-step button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ==================== Dashboard Layout ==================== */
+.dashboard-wrapper {
+  padding: 20px 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background-color: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* ==================== Grids ==================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ==================== Cards ==================== */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.small-card {
+  min-height: 220px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ==================== Weather Card ==================== */
+.weather-grid {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.weather-temp {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.weather-desc {
+  color: #6b7280;
+}
+
+.weather-meta div {
+  margin: 4px 0;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.forecast-item {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ==================== Alerts ==================== */
+.alerts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alert-item {
+  padding: 8px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.alert-item.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.alert-item.danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-item.neutral {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* ==================== AI Modal ==================== */
+.ai-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.ai-modal {
+  background: white;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ai-modal textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: none;
+}
+
+.ai-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ai-actions button {
+  margin-left: 8px;
+}
+
+.ai-answer {
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ==================== Crop Planner & Forms ==================== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.actions-row {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* ==================== Scheme & History ==================== */
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.history-list li {
+  padding: 6px 10px;
+  background: #f3f4f6;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tag.success {
+  background: #16a34a;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* ==================== Charts ==================== */
+.chart-box {
+  width: 100%;
+  height: 220px;
+}
+
+/* ==================== Total Expenses ==================== */
+.total-expenses {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.total-value {
+  color: #16a34a;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==================== Machine Usage History ==================== */
+.history-box,
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.history-item.info {
+  border-left: 4px solid #3b82f6;
+}
+
+.history-item.warning {
+  border-left: 4px solid #f59e0b;
+}
+
+.history-item.danger {
+  border-left: 4px solid #ef4444;
+}
+
+.history-item strong {
+  font-weight: 600;
+}
+
+.history-date {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* ==================== Local Market Prices ==================== */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.card ul li:last-child {
+  border-bottom: none;
+}
+
+/* ==================== Scheme History Table ==================== */
+.history-box .scheme-history {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-box .scheme-history li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-box .scheme-history li:last-child {
+  border-bottom: none;
+}
+
+/* ==================== Misc Enhancements ==================== */
+.ai-suggestions ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.ai-suggestions li {
+  margin-bottom: 6px;
+}
+
+.report-actions button {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* Scrollbar styling for lists */
+.history-list::-webkit-scrollbar,
+.history-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.history-list::-webkit-scrollbar-thumb,
+.history-box::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.5);
+  border-radius: 3px;
+}
+/* ==================== Card Hover Animations ==================== */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== Button Hover Effects ==================== */
+button.btn-primary,
+button.btn-secondary,
+button.back-btn,
+button.close-btn {
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #059669; /* Darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button.btn-secondary:hover {
+  background-color: #fbbf24; /* Darker yellow */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button.back-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* ==================== Pie & Bar Chart Tooltips ==================== */
+.recharts-tooltip-wrapper {
+  transition: all 0.2s ease !important;
+  opacity: 0.95 !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==================== Input Focus & Hover ==================== */
+input,
+select,
+textarea {
+  transition: all 0.2s ease;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.2);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #6ee7b7;
+}
+
+/* ==================== AI Modal Hover Enhancements ==================== */
+.ai-modal .btn-primary:hover {
+  background-color: #059669;
+}
+
+.ai-modal .btn-secondary:hover {
+  background-color: #fbbf24;
+}
+
+.ai-modal textarea:hover {
+  border-color: #10b981;
+}
+
+/* ==================== Scrollbar Smooth Hover ==================== */
+.history-list::-webkit-scrollbar-thumb,
+.history-box::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.6);
+  transition: background-color 0.2s ease;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover,
+.history-box::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.9);
+}
+
+/* ==================== Hover for Alerts ==================== */
+.alert-item:hover {
+  background-color: rgba(243, 244, 246, 0.8);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* ==================== Hover for Scheme History Rows ==================== */
+.history-box .scheme-history li:hover {
+  background-color: rgba(220, 252, 231, 0.6);
+  transform: translateX(3px);
+}
